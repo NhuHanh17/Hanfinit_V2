@@ -54,94 +54,88 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* ========================================
-   LIGHT MODE — Pastel Green
-   ======================================== */
-
 :root {
   color-scheme: light;
 
-  --background: oklch(0.985 0.008 145);
-  --foreground: oklch(0.27 0.035 150);
+  --background: oklch(0.985 0.008 130);
+  --foreground: oklch(0.27 0.035 155);
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.27 0.035 150);
+  --card: oklch(0.998 0.003 120);
+  --card-foreground: oklch(0.27 0.035 155);
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.27 0.035 150);
+  --popover: oklch(0.998 0.003 120);
+  --popover-foreground: oklch(0.27 0.035 155);
 
-  /* Primary: xanh lá dịu nhưng đủ tương phản */
   --primary: oklch(0.48 0.105 150);
   --primary-foreground: oklch(0.99 0.005 145);
 
-  /* Secondary: xanh mint nhạt */
-  --secondary: oklch(0.94 0.025 145);
-  --secondary-foreground: oklch(0.35 0.065 150);
+  --secondary: oklch(0.94 0.035 155);
+  --secondary-foreground: oklch(0.34 0.065 150);
 
-  /* Muted: vùng nội dung phụ */
-  --muted: oklch(0.96 0.012 145);
-  --muted-foreground: oklch(0.49 0.025 150);
+  --muted: oklch(0.96 0.012 140);
+  --muted-foreground: oklch(0.49 0.025 155);
 
-  /* Accent: hover và trạng thái được chọn */
-  --accent: oklch(0.93 0.04 145);
-  --accent-foreground: oklch(0.32 0.075 150);
+  --accent: oklch(0.925 0.05 145);
+  --accent-foreground: oklch(0.31 0.075 150);
 
-  --destructive: oklch(0.55 0.19 25);
+  --destructive: oklch(0.56 0.17 25);
 
   --border: oklch(0.91 0.018 145);
   --input: oklch(0.91 0.018 145);
   --ring: oklch(0.65 0.095 150);
 
-  /* Charts: bảng màu tài chính */
   --chart-1: oklch(0.55 0.12 150);
-  --chart-2: oklch(0.68 0.105 145);
-  --chart-3: oklch(0.76 0.09 105);
-  --chart-4: oklch(0.65 0.09 180);
-  --chart-5: oklch(0.53 0.07 125);
+  --chart-2: oklch(0.65 0.09 230);
+  --chart-3: oklch(0.78 0.12 95);
+  --chart-4: oklch(0.68 0.11 15);
+  --chart-5: oklch(0.65 0.09 300);
 
   --radius: 0.75rem;
 
-  /* Sidebar */
-  --sidebar: oklch(0.975 0.012 145);
-  --sidebar-foreground: oklch(0.32 0.04 150);
+  --sidebar: oklch(0.975 0.012 140);
+  --sidebar-foreground: oklch(0.32 0.04 155);
 
   --sidebar-primary: oklch(0.48 0.105 150);
   --sidebar-primary-foreground: oklch(0.99 0.005 145);
 
-  --sidebar-accent: oklch(0.92 0.045 145);
-  --sidebar-accent-foreground: oklch(0.32 0.075 150);
+  --sidebar-accent: oklch(0.925 0.05 145);
+  --sidebar-accent-foreground: oklch(0.31 0.075 150);
 
   --sidebar-border: oklch(0.91 0.018 145);
   --sidebar-ring: oklch(0.65 0.095 150);
-}
 
-/* ========================================
-   DARK MODE — Deep Forest Green
-   ======================================== */
+  --pastel-mint: oklch(0.92 0.055 165);
+  --pastel-sage: oklch(0.88 0.045 140);
+  --pastel-butter: oklch(0.94 0.075 100);
+  --pastel-sky: oklch(0.92 0.045 230);
+  --pastel-lavender: oklch(0.92 0.045 300);
+  --pastel-peach: oklch(0.93 0.055 40);
+  --pastel-rose: oklch(0.93 0.045 10);
+}
 
 .dark {
   color-scheme: dark;
 
-  --background: oklch(0.19 0.025 150);
-  --foreground: oklch(0.94 0.015 145);
+  --background: oklch(0.19 0.025 155);
+  --foreground: oklch(0.94 0.015 140);
 
-  --card: oklch(0.225 0.027 150);
-  --card-foreground: oklch(0.94 0.015 145);
+  --card: oklch(0.235 0.027 155);
+  --card-foreground: oklch(0.94 0.015 140);
 
-  --popover: oklch(0.235 0.03 150);
-  --popover-foreground: oklch(0.94 0.015 145);
+  --popover: oklch(0.245 0.03 155);
+  --popover-foreground: oklch(0.94 0.015 140);
 
   --primary: oklch(0.76 0.105 145);
-  --primary-foreground: oklch(0.23 0.045 150);
+  --primary-foreground: oklch(0.23 0.045 155);
 
-  --secondary: oklch(0.29 0.035 150);
+  --secondary: oklch(0.3 0.035 155);
   --secondary-foreground: oklch(0.91 0.02 145);
 
-  --muted: oklch(0.27 0.025 150);
+  --muted: oklch(0.27 0.025 155);
   --muted-foreground: oklch(0.72 0.025 145);
 
-  --accent: oklch(0.31 0.045 150);
-  --accent-foreground: oklch(0.91 0.025 145);
+  --accent: oklch(0.32 0.045 150);
+  --accent-foreground: oklch(0.93 0.025 145);
 
   --destructive: oklch(0.68 0.17 25);
 
@@ -150,27 +144,32 @@
   --ring: oklch(0.65 0.09 145);
 
   --chart-1: oklch(0.76 0.105 145);
-  --chart-2: oklch(0.68 0.105 170);
-  --chart-3: oklch(0.79 0.095 105);
-  --chart-4: oklch(0.7 0.085 190);
-  --chart-5: oklch(0.65 0.08 125);
+  --chart-2: oklch(0.73 0.09 230);
+  --chart-3: oklch(0.82 0.12 95);
+  --chart-4: oklch(0.73 0.11 15);
+  --chart-5: oklch(0.75 0.09 300);
 
-  --sidebar: oklch(0.215 0.03 150);
+  --sidebar: oklch(0.215 0.03 155);
   --sidebar-foreground: oklch(0.91 0.02 145);
 
   --sidebar-primary: oklch(0.76 0.105 145);
-  --sidebar-primary-foreground: oklch(0.23 0.045 150);
+  --sidebar-primary-foreground: oklch(0.23 0.045 155);
 
-  --sidebar-accent: oklch(0.3 0.04 150);
-  --sidebar-accent-foreground: oklch(0.92 0.025 145);
+  --sidebar-accent: oklch(0.31 0.045 150);
+  --sidebar-accent-foreground: oklch(0.93 0.025 145);
 
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.65 0.09 145);
-}
 
-/* ========================================
-   BASE STYLES
-   ======================================== */
+  /* Additional pastel colors — adjusted for dark surfaces */
+  --pastel-mint: oklch(0.39 0.055 165);
+  --pastel-sage: oklch(0.37 0.045 140);
+  --pastel-butter: oklch(0.4 0.075 100);
+  --pastel-sky: oklch(0.36 0.045 230);
+  --pastel-lavender: oklch(0.37 0.045 300);
+  --pastel-peach: oklch(0.38 0.055 40);
+  --pastel-rose: oklch(0.38 0.045 10);
+}
 
 @layer base {
   * {
@@ -217,4 +216,14 @@
       transition-duration: 0.01ms !important;
     }
   }
+}
+
+@theme inline {
+  --color-pastel-mint: var(--pastel-mint);
+  --color-pastel-sage: var(--pastel-sage);
+  --color-pastel-butter: var(--pastel-butter);
+  --color-pastel-sky: var(--pastel-sky);
+  --color-pastel-lavender: var(--pastel-lavender);
+  --color-pastel-peach: var(--pastel-peach);
+  --color-pastel-rose: var(--pastel-rose);
 }
