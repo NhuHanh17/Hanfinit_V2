@@ -14,21 +14,14 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 
-import {
-  GalleryVerticalEndIcon,
-  AudioLinesIcon,
-  TerminalIcon,
-  TerminalSquareIcon,
-  BotIcon,
-  BookOpenIcon,
-  Settings2Icon,
-  X,
-} from "lucide-react"
+import { X } from "lucide-react"
 
 import { NavUser } from "./nav-user"
 import Image from "next/image"
 import { NavMain } from "./nav-main"
 import { SIDEBAR_MENU } from "./sidebar-menu"
+import StatCard from "@/features/home/components/stats/stat-card"
+import TotalAssertsCard from "./total-assets-card"
 
 const data = {
   user: {
@@ -39,14 +32,18 @@ const data = {
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  const { setOpen } = useSidebar()
+  const { setOpen, open, openMobile, setOpenMobile } = useSidebar()
 
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar collapsible="icon" {...props} variant="inset">
       <SidebarHeader className="flex flex-row items-center justify-between">
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" render={<a href="/" />}>
+            <SidebarMenuButton
+              onClick={() => (open || openMobile) && setOpen(true)}
+              size="lg"
+              render={<a href="/" />}
+            >
               <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-green-700">
                 <Image
                   src={"/logo.png"}
@@ -66,13 +63,19 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
-        <SidebarMenuSubButton onClick={() => setOpen(false)}>
+        <SidebarMenuSubButton
+          onClick={() => {
+            setOpen(false)
+            setOpenMobile(false)
+          }}
+        >
           <X />
         </SidebarMenuSubButton>
       </SidebarHeader>
 
-      <SidebarContent className="mt-4">
+      <SidebarContent className="mt-3">
         <NavMain items={SIDEBAR_MENU} />
+        {(open || openMobile) && <TotalAssertsCard />}
       </SidebarContent>
 
       <SidebarFooter>

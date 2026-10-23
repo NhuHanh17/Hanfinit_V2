@@ -3,7 +3,9 @@ import {
   ChartColumn,
   HandCoinsIcon,
   Home,
+  LucideGoal,
   Receipt,
+  TargetIcon,
   WalletCards,
 } from "lucide-react"
 
@@ -33,6 +35,11 @@ export const SIDEBAR_MENU = [
     label: "Hóa đơn",
     icon: Receipt,
     path: "/bills",
+  },
+  {
+    label: "Mục tiêu tiết kiệm",
+    icon: TargetIcon,
+    path: "/saving-goals",
   },
   {
     label: "Báo cáo & thống kê",
