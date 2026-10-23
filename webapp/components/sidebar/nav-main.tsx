@@ -14,6 +14,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
+  useSidebar,
 } from "@/components/ui/sidebar"
 import { ChevronRightIcon, LucideIcon } from "lucide-react"
 import Link from "next/link"
@@ -23,38 +24,39 @@ export function NavMain({
   items,
 }: {
   items: {
-    title: string
-    url: string
+    label: string
+    path: string
     icon: LucideIcon
   }[]
 }) {
+  const { openMobile, open } = useSidebar()
   const pathname = usePathname()
 
   return (
     <SidebarGroup>
-      <SidebarMenu>
+      <SidebarMenu className="gap-2">
         {items.map((item) => {
           const Icon = item.icon
-          const isActive = pathname === item.url
+          const isActive = pathname === item.path
           return (
             <Link
-              key={item.title}
-              href={item.url}
-              className={`flex items-center gap-3 rounded-lg p-3 transition-colors ${
+              key={item.label}
+              href={item.path}
+              className={`flex items-center gap-3 rounded-lg transition-colors ${
                 isActive
                   ? "bg-sidebar-primary font-medium text-white"
                   : "hover:bg-accent"
-              }`}
+              } ${(open || openMobile) && "p-3"}`}
             >
               <Collapsible
                 className="group/collapsible"
                 render={<SidebarMenuItem />}
               >
                 <CollapsibleTrigger
-                  render={<SidebarMenuButton tooltip={item.title} />}
+                  render={<SidebarMenuButton tooltip={item.label} />}
                 >
                   <Icon />
-                  <span>{item.title}</span>
+                  <span className="font-medium">{item.label}</span>
                 </CollapsibleTrigger>
               </Collapsible>
             </Link>

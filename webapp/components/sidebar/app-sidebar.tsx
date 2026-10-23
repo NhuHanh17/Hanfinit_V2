@@ -28,6 +28,7 @@ import {
 import { NavUser } from "./nav-user"
 import Image from "next/image"
 import { NavMain } from "./nav-main"
+import { SIDEBAR_MENU } from "./sidebar-menu"
 
 const data = {
   user: {
@@ -35,29 +36,6 @@ const data = {
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
-
-  navMain: [
-    {
-      title: "Playground",
-      url: "/",
-      icon: TerminalSquareIcon,
-    },
-    {
-      title: "Models",
-      url: "/models",
-      icon: BotIcon,
-    },
-    {
-      title: "Documentation",
-      url: "/documentation",
-      icon: BookOpenIcon,
-    },
-    {
-      title: "Settings",
-      url: "/settings",
-      icon: Settings2Icon,
-    },
-  ],
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
@@ -94,7 +72,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
 
       <SidebarContent className="mt-4">
-        <NavMain items={data.navMain} />
+        <NavMain items={SIDEBAR_MENU} />
       </SidebarContent>
 
       <SidebarFooter>
