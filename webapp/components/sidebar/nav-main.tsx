@@ -1,22 +1,14 @@
 "use client"
 
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
+import { Collapsible, CollapsibleTrigger } from "@/components/ui/collapsible"
 import {
   SidebarGroup,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
   useSidebar,
 } from "@/components/ui/sidebar"
-import { ChevronRightIcon, LucideIcon } from "lucide-react"
+import { LucideIcon } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -46,7 +38,7 @@ export function NavMain({
                 isActive
                   ? "bg-sidebar-primary font-medium text-white"
                   : "hover:bg-accent"
-              } ${(open || openMobile) && "p-3"}`}
+              } ${(open || openMobile) && "p-2"}`}
             >
               <Collapsible
                 className="group/collapsible"
