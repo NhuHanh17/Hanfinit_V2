@@ -20,8 +20,6 @@ import { NavUser } from "./nav-user"
 import Image from "next/image"
 import { NavMain } from "./nav-main"
 import { SIDEBAR_MENU } from "./sidebar-menu"
-import StatCard from "@/features/home/components/stats/stat-card"
-import TotalAssertsCard from "./total-assets-card"
 
 const data = {
   user: {
@@ -75,7 +73,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
       <SidebarContent className="mt-3">
         <NavMain items={SIDEBAR_MENU} />
-        {(open || openMobile) && <TotalAssertsCard />}
       </SidebarContent>
 
       <SidebarFooter>

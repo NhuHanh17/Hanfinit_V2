@@ -1,9 +1,9 @@
 import {
   ArrowLeftRight,
   ChartColumn,
+  ChartPie,
   HandCoinsIcon,
   Home,
-  LucideGoal,
   Receipt,
   TargetIcon,
   WalletCards,
@@ -19,6 +19,11 @@ export const SIDEBAR_MENU = [
     label: "Ví",
     icon: WalletCards,
     path: "/wallets",
+  },
+  {
+    label: "Ngân sách",
+    icon: ChartPie,
+    path: "/budgets",
   },
   {
     label: "Giao dịch",
