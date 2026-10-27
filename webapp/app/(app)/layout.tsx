@@ -1,3 +1,4 @@
+import Greeting from "@/components/layout/Greeting"
 import Header from "@/components/layout/Header"
 import { AppSidebar } from "@/components/sidebar/app-sidebar"
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
@@ -12,7 +13,7 @@ export default function DashboardLayout({
       <AppSidebar />
       <SidebarInset className="border border-e-border">
         <Header />
-        <main className="min-w-0 flex-1 rounded-lg p-5">{children}</main>
+        <main className="min-w-0 flex-1 rounded-lg px-4 py-2">{children}</main>
       </SidebarInset>
     </SidebarProvider>
   )

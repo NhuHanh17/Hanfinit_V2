@@ -29,7 +29,7 @@ export function DynamicBreadcrumb() {
   const pathSegments = pathname.split("/").filter((segment) => segment !== "")
 
   return (
-    <Breadcrumb>
+    <Breadcrumb className="hidden sm:flex">
       <BreadcrumbList>
         <BreadcrumbItem>
           {pathSegments.length === 0 ? (
