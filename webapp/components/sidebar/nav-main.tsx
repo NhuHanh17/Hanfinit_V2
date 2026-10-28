@@ -37,7 +37,7 @@ export function NavMain({
               className={`flex items-center gap-3 rounded-lg transition-colors ${
                 isActive
                   ? "bg-sidebar-primary font-medium text-white"
-                  : "hover:bg-accent"
+                  : "hover:bg-sidebar-accent"
               } ${(open || openMobile) && "p-2"}`}
             >
               <Collapsible

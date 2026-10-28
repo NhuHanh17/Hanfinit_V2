@@ -60,6 +60,7 @@
 */
 
 :root {
+  color-scheme: light dark;
   --background: oklch(0.974 0.008 152);
   --foreground: oklch(0.25 0.03 160);
   --card: oklch(100% 0 none);
@@ -217,6 +218,12 @@
     0 8px 14px -4px hsl(230.8 5.953% 57.06% / 0.12),
     0 8px 10px -1px hsl(230.8 5.953% 57.06% / 0.12);
   --shadow-2xl: 0 8px 14px -4px hsl(230.8 5.953% 57.06% / 0.3);
+}
+
+html,
+body {
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
 }
 
 @theme inline {

@@ -7,11 +7,11 @@ export default function Page() {
     <>
       <div className="">
         <Greeting />
-        <div className="grid grid-cols-1 gap-5 py-2 sm:grid-cols-1 lg:grid-cols-2">
-          <div>
+        <div className="grid max-h-svh grid-cols-1 gap-5 py-2 sm:grid-cols-1 lg:grid-cols-2">
+          <div className="max-h-svh">
             <TotalAssertsCard />
           </div>
-          <div className="flex flex-1 gap-5">
+          <div className="hidden flex-1 gap-5 sm:flex">
             {Array.from({ length: 2 }).map((_, index) => (
               <StatCard key={index} />
             ))}
