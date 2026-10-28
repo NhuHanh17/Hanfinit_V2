@@ -3,14 +3,16 @@
 import { useState } from "react"
 import {
   Card,
+  CardAction,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "../../../../components/ui/card"
-import { Eye, EyeClosed, Plus, Wallet } from "lucide-react"
+import { Eye, EyeClosed, Plus, TrendingUp, Wallet } from "lucide-react"
 import { formatCurrency } from "@/utils/format-currency"
 import { Button } from "../../../../components/ui/button"
+import { Separator } from "@/components/ui/separator"
 
 export default function TotalAssertsCard() {
   const [open, setOpen] = useState(true)
@@ -47,14 +49,24 @@ export default function TotalAssertsCard() {
       </CardHeader>
       <CardContent className="text-3xl font-bold text-primary">
         {formatCurrency(12000000000, open)}
+        <CardAction>
+          <Button
+            className={"p-5 font-semibold text-background"}
+            onClick={() => handleAddTransaction()}
+          >
+            <Plus /> Thêm giao dịch
+          </Button>
+        </CardAction>
       </CardContent>
+      <Separator />
       <CardFooter>
-        <Button
-          className={"p-5 font-semibold text-background"}
-          onClick={() => handleAddTransaction()}
-        >
-          <Plus /> Thêm giao dịch
-        </Button>
+        <div className="flex flex-col">
+          <span className="flex flex-1 text-muted-foreground">
+            Thu
+            <TrendingUp />
+          </span>
+          <span>{formatCurrency(100000)}</span>
+        </div>
       </CardFooter>
     </Card>
   )

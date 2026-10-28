@@ -1,4 +1,3 @@
-import Greeting from "@/components/layout/Greeting"
 import Header from "@/components/layout/Header"
 import { AppSidebar } from "@/components/sidebar/app-sidebar"
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"

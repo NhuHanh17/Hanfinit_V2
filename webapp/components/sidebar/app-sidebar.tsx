@@ -1,7 +1,5 @@
 "use client"
 
-import * as React from "react"
-
 import {
   Sidebar,
   SidebarContent,
@@ -20,6 +18,8 @@ import { NavUser } from "./nav-user"
 import Image from "next/image"
 import { NavMain } from "./nav-main"
 import { SIDEBAR_MENU } from "./sidebar-menu"
+import { useState } from "react"
+import { Button } from "../ui/button"
 
 const data = {
   user: {
@@ -31,6 +31,8 @@ const data = {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const { setOpen, open, openMobile, setOpenMobile } = useSidebar()
+
+  const [authenticated, setAuthenticated] = useState(false)
 
   return (
     <Sidebar collapsible="icon" {...props} variant="inset">
@@ -76,7 +78,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarContent>
 
       <SidebarFooter>
-        <NavUser user={data.user} />
+        {authenticated ? (
+          <NavUser user={data.user} />
+        ) : (
+          <Button onClick={() => setAuthenticated(true)}>Đăng nhập</Button>
+        )}
       </SidebarFooter>
     </Sidebar>
   )

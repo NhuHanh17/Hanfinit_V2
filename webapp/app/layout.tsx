@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Inter, Geist_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -20,6 +21,9 @@ const fontMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Hanfinit - Quản lý tài chính cá nhân",
   description: "Hệ thống hỗ trợ quản lý tài chính cá nhân thông minh",
+  other: {
+    "color-scheme": "light dark",
+  },
 }
 
 export default function RootLayout({
@@ -40,6 +44,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
+          <Analytics />
           {children}
         </ThemeProvider>
       </body>
