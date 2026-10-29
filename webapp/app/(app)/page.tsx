@@ -12,7 +12,7 @@ export default function Page() {
           <TotalAssertsCard />
         </div>
       </div>
-      <div className="grid-rows grid gap-3 sm:grid-cols-1 lg:grid-cols-3">
+      <div className="flex gap-2">
         {Array.from({ length: 3 }).map((_, index) => (
           <StatCard key={index} />
         ))}

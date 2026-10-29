@@ -16,6 +16,7 @@
     "@radix-ui/react-dropdown-menu": "^2.2.1",
     "@tailwindcss/vite": "^4.3.3",
     "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "analytics": "github:vercel/analytics",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.5.0",
