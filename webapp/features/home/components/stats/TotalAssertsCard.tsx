@@ -31,46 +31,49 @@ export default function TotalAssertsCard() {
 
   return (
     <Card className="max-w-s flex w-full flex-1 gap-2 bg-[url('/background-total-money.png')] bg-cover bg-top-right bg-no-repeat">
-      <CardHeader className="flex flex-row items-center">
-        <CardTitle className="flex gap-1 font-bold text-green-700">
-          <Wallet /> Tổng tài sản
-        </CardTitle>
-        {open ? (
+      <CardHeader className="flex flex-row items-center justify-between">
+        <div className="flex flex-row items-center justify-center">
+          <CardTitle className="flex gap-1 font-bold text-green-700">
+            <Wallet /> Tổng tài sản
+          </CardTitle>
+          {open ? (
+            <Button
+              className="hover-visible:bg-transparent hover:cursor-pointer hover:bg-transparent"
+              variant={"ghost"}
+              onClick={() => setOpen(!open)}
+            >
+              <EyeClosed className="h-7 w-7 text-green-600" />
+            </Button>
+          ) : (
+            <Button
+              className={
+                "hover-visible:bg-transparent hover:cursor-pointer hover:bg-transparent"
+              }
+              variant={"ghost"}
+              onClick={() => setOpen(!open)}
+            >
+              <Eye className="text-green-600" />
+            </Button>
+          )}
+        </div>
+
+        <CardAction>
           <Button
-            className="hover:bg-transparent focus:cursor-pointer focus-visible:bg-transparent"
-            variant={"ghost"}
-            onClick={() => setOpen(!open)}
+            className={"p-5 font-semibold text-background hover:cursor-pointer"}
+            onClick={() => handleAddTransaction()}
           >
-            <EyeClosed className="h-7 w-7 text-green-600" />
+            <Plus /> Thêm giao dịch
           </Button>
-        ) : (
-          <Button
-            className={
-              "hover:bg-transparent focus:cursor-pointer focus-visible:bg-transparent"
-            }
-            variant={"ghost"}
-            onClick={() => setOpen(!open)}
-          >
-            <Eye className="text-green-600" />
-          </Button>
-        )}
+        </CardAction>
       </CardHeader>
       <CardContent>
         <div className="text-3xl font-bold text-primary">
           {formatCurrency(12000000000, open)}
         </div>
         <div className="text-muted-foreground">3 ví đang hoạt động</div>
-        <CardAction>
-          <Button
-            className={"p-5 font-semibold text-background"}
-            onClick={() => handleAddTransaction()}
-          >
-            <Plus /> Thêm giao dịch
-          </Button>
-        </CardAction>
       </CardContent>
       <Separator />
-      <CardFooter className="gap-6">
+      <CardFooter className="flex items-center justify-around">
         <div className="flex flex-col items-center justify-center font-bold text-primary">
           <span className="flex flex-1">
             Thu <TrendingUp />
