@@ -1,5 +1,4 @@
 import Greeting from "@/components/layout/Greeting"
-import { Card } from "@/components/ui/card"
 import MonthlyBudgetCard from "@/features/home/components/MonthlyBudgetCard"
 import StatCard from "@/features/home/components/stats/StatCard"
 import TotalAssertsCard from "@/features/home/components/stats/TotalAssertsCard"

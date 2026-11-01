@@ -20,6 +20,7 @@ import { NavMain } from "./nav-main"
 import { SIDEBAR_MENU } from "./sidebar-menu"
 import { useState } from "react"
 import { Button } from "../ui/button"
+import { redirect } from "next/navigation"
 
 const data = {
   user: {
@@ -33,6 +34,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const { setOpen, open, openMobile, setOpenMobile } = useSidebar()
 
   const [authenticated, setAuthenticated] = useState(false)
+
+  function handleLogin() {
+    redirect("/auth/login")
+  }
 
   return (
     <Sidebar collapsible="icon" {...props} variant="inset">
@@ -81,7 +86,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         {authenticated ? (
           <NavUser user={data.user} />
         ) : (
-          <Button onClick={() => setAuthenticated(true)}>Đăng nhập</Button>
+          <Button onClick={() => handleLogin()}>Đăng nhập</Button>
         )}
       </SidebarFooter>
     </Sidebar>
