@@ -7,6 +7,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 import { Toaster } from "sonner"
+import Providers from "@/components/Providers"
 
 const inter = Inter({
   subsets: ["latin", "vietnamese"],
@@ -40,17 +41,12 @@ export default function RootLayout({
       className={cn(inter.variable, fontMono.variable, "font-sans")}
     >
       <body className="min-h-screen antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem={false}
-          disableTransitionOnChange
-        >
+        <Providers>
           <Analytics />
           <SpeedInsights />
           {children}
-        </ThemeProvider>
-        <Toaster position="top-center" richColors />
+          <Toaster position="top-center" richColors />
+        </Providers>
       </body>
     </html>
   )
