@@ -48,6 +48,16 @@ export default function () {
                 {formatCurrency(255000)}
               </TableCell>
             </TableRow>
+            <TableRow>
+              <TableCell>02 Tháng 11</TableCell>
+              <TableCell className="flex flex-col">
+                <span className="font-semibold">Internet - FPT</span>
+                <span className="text-xs text-muted-foreground">Còn..ngày</span>
+              </TableCell>
+              <TableCell className="text-right font-bold text-destructive">
+                {formatCurrency(255000)}
+              </TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </CardContent>
